@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PierresTreats.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace PierresTreats
 {
@@ -25,6 +26,10 @@ namespace PierresTreats
             services.AddEntityFrameworkMySql()
                 .AddDbContext<PierresTreatsContext>(options => options
                 .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
+
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<PierresTreatsContext>()
+                .AddDefaultTokenProviders();
         }
         public void Configure(IApplicationBuilder app)
         {
