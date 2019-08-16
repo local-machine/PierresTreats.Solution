@@ -1,11 +1,11 @@
-namespace ToDoList.Models
+namespace PierresTreats.Models
 {
-    public class Item
+    public class Treat
     {
-        public int ItemId { get; set; }
+        public int TreatId { get; set; }
         public string Description { get; set; }
 
-        public int CategoryId { get; set; }
-        public virtual Category Category { get; set; }
+        public int FlavorId { get; set; }
+        public virtual Flavor Flavor { get; set; }
     }
 }

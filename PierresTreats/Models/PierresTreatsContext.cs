@@ -1,11 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace ToDoList.Models
+namespace PierresTreats.Models
 {
-    public class ToDoListContext : DbContext
+    public class PierresTreatsContext : DbContext
     {
-        public virtual DbSet<Category> Categories { get; set; }
-        public virtual DbSet<Item> Items { get; set; }
-        public ToDoListContext(DbContextOptions options) : base(options) { }
+        public virtual DbSet<Flavor> Flavors { get; set; }
+        public virtual DbSet<Treat> Treats { get; set; }
+        public PierresTreatsContext(DbContextOptions options) : base(options) { }
     }
 }

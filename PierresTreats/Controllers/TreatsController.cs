@@ -1,17 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
-using ToDoList.Models;
+using PierresTreats.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace ToDoList.Controllers
+namespace PierresTreats.Controllers
 {
-    public class ItemsController : Controller
+    public class TreatsController : Controller
     {
-        private readonly ToDoListContext _db;
+        private readonly PierresTreatsContext _db;
 
-        public ItemsController(ToDoListContext db)
+        public TreatsController(PierresTreatsContext db)
         {
             _db = db;
         }
@@ -19,55 +19,55 @@ namespace ToDoList.Controllers
 
         public ActionResult Index()
         {
-            List<Item> model = _db.Items.Include(items => items.Category).ToList();
+            List<Treat> model = _db.Treats.Include(treats => treats.Flavor).PierresList();
             return View(model);
         }
 
         public ActionResult Create()
         {
-            ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name");
+            ViewBag.FlavorId = new SelectList(_db.Flavors, "FlavorId", "Name");
             return View();
         }
 
         [HttpPost]
-        public ActionResult Create(Item item)
+        public ActionResult Create(Treat treat)
         {
-            _db.Items.Add(item);
+            _db.Treats.Add(treat);
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
 
         public ActionResult Details(int id)
         {
-            Item thisItem = _db.Items.FirstOrDefault(items => items.ItemId == id);
-            return View(thisItem);
+            Treat thisTreat = _db.Treats.FirstOrDefault(treats => treats.TreatId == id);
+            return View(thisTreat);
         }
         public ActionResult Edit(int id)
         {
-            var thisItem = _db.Items.FirstOrDefault(items => items.ItemId == id);
-            ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name");
-            return View(thisItem);
+            var thisTreat = _db.Treats.FirstOrDefault(treats => treats.TreatId == id);
+            ViewBag.FlavorId = new SelectList(_db.Flavors, "FlavorId", "Name");
+            return View(thisTreat);
         }
 
         [HttpPost]
-        public ActionResult Edit(Item item)
+        public ActionResult Edit(Treat treat)
         {
-            _db.Entry(item).State = EntityState.Modified;
+            _db.Entry(treat).State = EntityState.Modified;
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
 
         public ActionResult Delete(int id)
         {
-            var thisItem = _db.Items.FirstOrDefault(items => items.ItemId == id);
-            return View(thisItem);
+            var thisTreat = _db.Treats.FirstOrDefault(treats => treats.TreatId == id);
+            return View(thisTreat);
         }
 
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            var thisItem = _db.Items.FirstOrDefault(items => items.ItemId == id);
-            _db.Items.Remove(thisItem);
+            var thisTreat = _db.Treats.FirstOrDefault(treats => treats.TreatId == id);
+            _db.Treats.Remove(thisTreat);
             _db.SaveChanges();
             return RedirectToAction("Index");
         }

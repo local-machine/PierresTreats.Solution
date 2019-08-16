@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using ToDoList.Models;
+using PierresTreats.Models;
 
-namespace ToDoList.Controllers
+namespace PierresTreats.Controllers
 {
     public class HomeController : Controller
     {
