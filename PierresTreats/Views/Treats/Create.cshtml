@@ -1,4 +1,3 @@
-@* 
 @{
   Layout = "_Layout";
 }
@@ -11,11 +10,11 @@
     @Html.LabelFor(model => model.Description)
     @Html.TextBoxFor(model => model.Description)
 
-    @Html.LabelFor(model => model.Flavor)
+    @Html.Label("Select flavor")
     @Html.DropDownList("FlavorId")
+
     <input type="submit" value="Add new treat" class="btn btn-default"/>
     
 }
 
 <p>@Html.ActionLink("Show all treats", "Index")</p> 
-*@

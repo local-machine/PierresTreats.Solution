@@ -1,4 +1,3 @@
-@* 
 @{
   Layout = "_Layout";
 }
@@ -16,10 +15,9 @@
 
   @foreach (Treat treat in Model)
 {
-  <li>@Html.ActionLink($"{treat.Description}", "Details", new { id = treat.TreatId}) | @treat.Flavor.Name</li>
+  <li>@Html.ActionLink($"{treat.Description}", "Details", new { id = treat.TreatId})</li>
 }
 
 
 <p>@Html.ActionLink("Add new treat", "Create")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
-*@
