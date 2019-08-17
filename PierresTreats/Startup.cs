@@ -36,6 +36,7 @@ namespace PierresTreats
             // THIS LINE MAKES IT SO WE CAN USE STATIC FILES, SUCH AS STYLES.CSS
             app.UseStaticFiles();
             app.UseDeveloperExceptionPage();
+            app.UseAuthentication();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
