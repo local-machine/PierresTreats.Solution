@@ -1,4 +1,4 @@
-
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -13,8 +13,8 @@ namespace PierresTreats.Models
         public int TreatId { get; set; }
         public string Description { get; set; }
 
-
         public ICollection<FlavorTreat> Flavors { get; }
+        public virtual ApplicationUser User { get; set; }
         public Treat()
         {
             this.Flavors = new HashSet<FlavorTreat>();
