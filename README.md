@@ -26,12 +26,8 @@ Pierre's Bakery has many treats of various flavors for resale. This website help
 - Open the terminal, clone down this repository.
 - Via the terminal, navigate to the project folder PierresTreats.Solution/PierresTreats
   - Enter the command: dotnet restore
+  - Enter the command: dotnet ef database update
   - Enter the command: dotnet run
-- MySQL Setup
-  - Execute the following via the terminal: mysql -uroot -pepicodus
-    - Note: If you have a different password for MySQLWorkBench, append the command -p.
-  - If successful, you'll see the following returned: mysql>
-  - Execute the following via the terminal: dotnet ef database update
 - Browse to http://localhost:5000/
 
 ## Specs
