@@ -8,7 +8,7 @@
 
 ## Description
 
-Pierre's Bakery has many treats of various flavors for resale. This website helps document them with a many to many relational database that impliments user authintication.
+Pierre's Bakery has many treats of various flavors for resale. This website helps document them with a many to many relational database that impliments user authentication.
 
 ## Technologies Used
 
@@ -38,9 +38,14 @@ Pierre's Bakery has many treats of various flavors for resale. This website help
 
 | Behaviors                              |                                                   Input                                                    |                Output                 |
 | -------------------------------------- | :--------------------------------------------------------------------------------------------------------: | :-----------------------------------: |
-| User can add new flavors.              |                      User clicks "Add a new flavor", fills out form and clicks "Add".                      |        New flavor is created.         |
-| User can add new treats to the flavor. | User clicks on previously created flavor, clicks "Add a new treat", fills out form and clicks "Add treat". | New treat for that flavor is created. |
-| User can view all flavors.             |                                         User clicks "View flavors"                                         |  List of previously created flavors.  |
+| User can register. | User clicks "Create an account", fills out form, and clicks "Register". | New registration is created. |
+| User can login. | User clicks "Log in", fills out form with previously created user info, and clicks "Log in". | User is logged on. |
+| User can read all flavors they created if logged on. | User clicks, "See all flavors". | All previously created flavors by that user are listed. |
+| User can read all treats they created if logged on. | User clicks, "See all treats". | All previously created treats by that user are listed. |
+| User can create new flavors if logged on. | User clicks, "See all flavors", "Add a new flavor", fills out form and clicks "Add". | New flavor is created. |
+| User can create new treats to the flavor if logged in. | User clicks, "See all treats", clicks "Add a new treat", fills out form and clicks "Add treat". | New treat for that flavor is created. |
+| User can update a particular treat or flavor. | User clicks, "See all treats", clicks a previously created line item, clicks "Edit Flavor/Treat", fills out form and clicks "Save".  | Flavor or treat is updated. |
+| User can delete a particular treat or flavor. | User clicks, "See all treats", clicks a previously created line item, clicks "Delete Flavor/Treat", clicks "Delete".  | Flavor or treat is deleted. |
 
 ## Known Bugs
 
