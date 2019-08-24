@@ -34,14 +34,17 @@ Pierre's Bakery has many treats of various flavors for resale. This website help
 
 | Behaviors                              |                                                   Input                                                    |                Output                 |
 | -------------------------------------- | :--------------------------------------------------------------------------------------------------------: | :-----------------------------------: |
-| User can register. | User clicks "Create an account", fills out form, and clicks "Register". | New registration is created. |
-| User can login. | User clicks "Log in", fills out form with previously created user info, and clicks "Log in". | User is logged on. |
-| User can read all flavors they created if logged on. | User clicks, "See all flavors". | All previously created flavors by that user are listed. |
-| User can read all treats they created if logged on. | User clicks, "See all treats". | All previously created treats by that user are listed. |
-| User can create new flavors if logged on. | User clicks, "See all flavors", "Add a new flavor", fills out form and clicks "Add". | New flavor is created. |
-| User can create new treats to the flavor if logged in. | User clicks, "See all treats", clicks "Add a new treat", fills out form and clicks "Add treat". | New treat for that flavor is created. |
-| User can update a particular treat or flavor. | User clicks, "See all treats", clicks a previously created line item, clicks "Edit Flavor/Treat", fills out form and clicks "Save".  | Flavor or treat is updated. |
-| User can delete a particular treat or flavor. | User clicks, "See all treats", clicks a previously created line item, clicks "Delete Flavor/Treat", clicks "Delete".  | Flavor or treat is deleted. |
+| Users can register. | User clicks "Create an account", fills out the form, and clicks "Register". | New registration is created. |
+| Users can login. | User clicks "Log in", fills out the form with previously created user info, and clicks "Log in". | User is logged on. |
+| Users can logoff. | User clicks "Log off". | User is logged off. |
+| Users can read all the flavors they created if logged on. | User clicks, "See all flavors". | All previously created flavors by that user are listed. |
+| Users can read all the treats they created if logged on. | User clicks, "See all treats". | All previously created treats by that user are listed. |
+| Users can create new flavors if logged on. | User clicks, "See all flavors", "Add a new flavor", fill out the form and clicks "Add". | New flavor is created. |
+| Users can create new treats with a flavor if logged in. | User clicks, "See all treats", clicks "Add a new treat", fill out a form and clicks "Add treat". | New treat for that flavor is created. |
+| Users can update a particular treat or flavor. | User clicks, "See all treats", clicks a previously created line item, clicks "Edit Flavor/Treat", fills out a form and clicks "Save".  | Flavor or treat is updated. |
+| Users can delete a particular treat or flavor. | User clicks, "See all treats", clicks a previously created line item, clicks "Delete Flavor/Treat", clicks "Delete".  | Flavor or treat is deleted. |
+
+
 
 ## Known Bugs
 
